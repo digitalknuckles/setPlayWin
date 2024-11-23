@@ -46,19 +46,19 @@ return (
 	onClick={() => setActiveContextIndex(0)}
 	>
 	Why React?
-	</buttton>
+	</button>
 		<button 
 			className={activeContextIndex === 1 ? "active" :""}
 			onClick={() => setActiveContextIndex(1)}
 		>
 	Core Features
-	</buttton>
+	</button>
 		<button 
 			className={activeContextIndex === 2 ? "active" :""}
 			onClick={() => setActiveContextIndex(2)}
 		>
 	Related Sources
-	</buttton>
+	</button>
 		<button 
 			className={activeContextIndex === 3 ? "active" :""}
 			onClick={() => setActiveContextIndex(3)}
