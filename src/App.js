@@ -1,5 +1,10 @@
 import { useState } from "react";
 import "./styles.css";
+import placeholder0 from "./placeholder0.png";
+import placeholder1 from "./placeholder1.png";
+import placeholder2 from "./placeholder2.png";
+import placeholder3 from "./placeholder3.png";
+import placeholder4 from "./placeholder4.png";
 
 // Content for each section
 const content = [
@@ -38,34 +43,23 @@ const content = [
   {
     title: "Contact",
     items: [
-      "Email: support@setplaywinapp.com",
+      "Email: setplaywin@gmail.com.com",
       "Discord: Join the Community",
-      "Website: www.setplaywinapp.com",
+      "Website: www.setplaywin.com",
     ],
   },
 ];
 
-// Component Function
+// Localized images array
+const images = [placeholder0, placeholder1, placeholder2, placeholder3, placeholder4];
+
 export default function App() {
   const [activeContentIndex, setActiveContentIndex] = useState(0);
-
-  // Updated IPFS-hosted images for each section
-  const backgrounds = [
-    "placeholder0.png",
-    "placeholder1.png",
-    "placeholder2.png",
-    "placeholder3.png",
-    "placeholder4.png",
-  ];
 
   return (
     <div>
       <header>
-        <img
-          src="react-logo-xs.png"
-          alt="React logo"
-          style={{ width: "50px", marginRight: "10px" }}
-        />
+        <img src="react-logo-xs.png" alt="React logo" style={{ width: "50px", marginRight: "10px" }} />
         <div>
           <h1>SetPlayWinApp</h1>
           <p>Your Hub for Games, Web3, and Community</p>
@@ -86,15 +80,9 @@ export default function App() {
         </menu>
         <div
           id="tab-content"
+          className={`section-${activeContentIndex}`}
           style={{
-            backgroundImage: `url(${backgrounds[activeContentIndex]})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            minHeight: "400px",
-            color: "white",
-            padding: "20px",
-            borderRadius: "8px",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+            backgroundImage: `url(${images[activeContentIndex]})`,
           }}
         >
           <h2>{content[activeContentIndex].title}</h2>
